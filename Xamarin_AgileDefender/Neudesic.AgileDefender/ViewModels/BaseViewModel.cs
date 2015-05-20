@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace Neudesic.Tastings.ViewModels
+namespace Neudesic.AgileDefender.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {

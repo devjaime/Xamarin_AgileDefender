@@ -1,10 +1,10 @@
-﻿using Neudesic.Tastings.Configuration;
-using Neudesic.Tastings.Models;
-using Neudesic.Tastings.ViewModels;
+﻿using Neudesic.AgileDefender.Configuration;
+using Neudesic.AgileDefender.Models;
+using Neudesic.AgileDefender.ViewModels;
 using Xamarin;
 using Xamarin.Forms;
 
-namespace Neudesic.Tastings.Views
+namespace Neudesic.AgileDefender.Views
 {
     public partial class TastingItemDetailsPage : ContentPage
     {

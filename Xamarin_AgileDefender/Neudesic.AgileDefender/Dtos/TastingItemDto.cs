@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Neudesic.Tastings.Dtos
+namespace Neudesic.AgileDefender.Dtos
 {
     public class TastingItemDto
     {

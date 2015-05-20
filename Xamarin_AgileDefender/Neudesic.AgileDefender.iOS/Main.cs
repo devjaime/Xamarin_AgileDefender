@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace Neudesic.Tastings.iOS
+namespace Neudesic.AgileDefender.iOS
 {
     public class Application
     {

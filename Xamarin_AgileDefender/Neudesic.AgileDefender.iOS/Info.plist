@@ -15,7 +15,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>Neudesic Tastings</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.neudesic.tastings</string>
+	<string>com.neudesic.agiledefender</string>
 	<key>CFBundleIconFiles</key>
 	<array/>
 	<key>UILaunchStoryboardName</key>

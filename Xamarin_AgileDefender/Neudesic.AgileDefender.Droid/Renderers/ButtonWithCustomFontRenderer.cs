@@ -1,12 +1,12 @@
 using System;
 using Android.Graphics;
-using Neudesic.Tastings.Droid.Renderers;
-using Neudesic.Tastings.Views;
+using Neudesic.AgileDefender.Droid.Renderers;
+using Neudesic.AgileDefender.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
 [assembly: ExportRenderer(typeof(ButtonWithCustomFont), typeof(ButtonWithCustomFontRenderer))]
-namespace Neudesic.Tastings.Droid.Renderers
+namespace Neudesic.AgileDefender.Droid.Renderers
 {
     public class ButtonWithCustomFontRenderer : ButtonRenderer
     {

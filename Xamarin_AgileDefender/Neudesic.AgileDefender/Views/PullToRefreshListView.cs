@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 
-namespace Neudesic.Tastings.Views
+namespace Neudesic.AgileDefender.Views
 {
     public class PullToRefreshListView : ListView
     {

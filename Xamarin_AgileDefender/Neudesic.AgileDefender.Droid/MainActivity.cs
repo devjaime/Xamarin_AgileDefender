@@ -6,10 +6,10 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Neudesic.Tastings.Configuration;
+using Neudesic.AgileDefender.Configuration;
 using Xamarin;
 
-namespace Neudesic.Tastings.Droid
+namespace Neudesic.AgileDefender.Droid
 {
     [Activity(Label = "Neudesic Tastings", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity

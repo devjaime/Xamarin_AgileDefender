@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.Reflection;
-using Neudesic.Tastings.Views;
+using Neudesic.AgileDefender.Views;
 using Xamarin;
 
-namespace Neudesic.Tastings.Helpers
+namespace Neudesic.AgileDefender.Helpers
 {
     public static class CreateToolBarItem
     {

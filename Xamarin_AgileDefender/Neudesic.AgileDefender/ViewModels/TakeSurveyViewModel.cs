@@ -1,8 +1,8 @@
-﻿using Neudesic.Tastings.Configuration;
-using Neudesic.Tastings.Helpers;
+﻿using Neudesic.AgileDefender.Configuration;
+using Neudesic.AgileDefender.Helpers;
 using Xamarin.Forms;
 
-namespace Neudesic.Tastings.ViewModels
+namespace Neudesic.AgileDefender.ViewModels
 {
     public class TakeSurveyViewModel: BaseViewModel
     {

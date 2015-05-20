@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
-using Neudesic.Tastings.Configuration;
+using Neudesic.AgileDefender.Configuration;
 using UIKit;
 using Xamarin;
 
-namespace Neudesic.Tastings.iOS
+namespace Neudesic.AgileDefender.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
     // User Interface of the application, as well as listening (and optionally responding) to 

@@ -1,4 +1,4 @@
-﻿namespace Neudesic.Tastings.Services
+﻿namespace Neudesic.AgileDefender.Services
 {
     public static class ServiceLocator
     {

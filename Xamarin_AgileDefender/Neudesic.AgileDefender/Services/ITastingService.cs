@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
-using Neudesic.Tastings.Models;
+using Neudesic.AgileDefender.Models;
 
-namespace Neudesic.Tastings.Services
+namespace Neudesic.AgileDefender.Services
 {
     public interface ITastingService
     {

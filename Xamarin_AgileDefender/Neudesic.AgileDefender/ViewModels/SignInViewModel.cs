@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using Neudesic.Tastings.Dtos;
-using Neudesic.Tastings.Helpers;
-using Neudesic.Tastings.Models;
-using Neudesic.Tastings.Services;
-using Neudesic.Tastings.Views;
+using Neudesic.AgileDefender.Dtos;
+using Neudesic.AgileDefender.Helpers;
+using Neudesic.AgileDefender.Models;
+using Neudesic.AgileDefender.Services;
+using Neudesic.AgileDefender.Views;
 using Xamarin;
 using Xamarin.Forms;
 
-namespace Neudesic.Tastings.ViewModels
+namespace Neudesic.AgileDefender.ViewModels
 {
     public class SignInViewModel : BaseViewModel
     {

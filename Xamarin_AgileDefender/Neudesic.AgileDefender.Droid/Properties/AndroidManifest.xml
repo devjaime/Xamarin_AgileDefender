@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" android:versionCode="5" android:versionName="0.1.0.0" package="com.neudesic.tastings">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" android:versionCode="5" android:versionName="0.1.0.0" package="com.neudesic.agiledefender">
 	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="21" />
 	<application android:label="Neudesic Tastings" android:icon="@drawable/icon"></application>
 	<uses-permission android:name="android.permission.INTERNET" />

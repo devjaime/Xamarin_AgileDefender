@@ -1,7 +1,7 @@
 ﻿using System;
-using Neudesic.Tastings.Dtos;
+using Neudesic.AgileDefender.Dtos;
 
-namespace Neudesic.Tastings.Models
+namespace Neudesic.AgileDefender.Models
 {
     public class TastingInfo
     {

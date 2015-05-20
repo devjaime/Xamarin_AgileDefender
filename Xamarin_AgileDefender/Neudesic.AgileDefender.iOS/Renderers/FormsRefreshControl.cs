@@ -2,7 +2,7 @@ using Foundation;
 using UIKit;
 using Xamarin.Forms;
 
-namespace Neudesic.Tastings.iOS.Renderers
+namespace Neudesic.AgileDefender.iOS.Renderers
 {
     public class FormsRefreshControl : UIRefreshControl
     {

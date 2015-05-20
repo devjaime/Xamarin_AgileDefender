@@ -1,13 +1,13 @@
 ﻿using System.Collections.ObjectModel;
 using System.Threading.Tasks;
-using Neudesic.Tastings.Configuration;
-using Neudesic.Tastings.Helpers;
-using Neudesic.Tastings.Models;
-using Neudesic.Tastings.Services;
+using Neudesic.AgileDefender.Configuration;
+using Neudesic.AgileDefender.Helpers;
+using Neudesic.AgileDefender.Models;
+using Neudesic.AgileDefender.Services;
 using Xamarin;
 using Xamarin.Forms;
 
-namespace Neudesic.Tastings.ViewModels
+namespace Neudesic.AgileDefender.ViewModels
 {
     public class TastingItemListViewModel : BaseViewModel
     {

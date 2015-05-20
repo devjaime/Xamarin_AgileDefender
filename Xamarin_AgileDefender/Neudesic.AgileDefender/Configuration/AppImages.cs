@@ -1,4 +1,4 @@
-﻿namespace Neudesic.Tastings.Configuration
+﻿namespace Neudesic.AgileDefender.Configuration
 {
     public static class AppImages
     {

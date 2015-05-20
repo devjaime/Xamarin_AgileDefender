@@ -2,13 +2,13 @@
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using Neudesic.Tastings.Configuration;
-using Neudesic.Tastings.Dtos;
-using Neudesic.Tastings.Models;
+using Neudesic.AgileDefender.Configuration;
+using Neudesic.AgileDefender.Dtos;
+using Neudesic.AgileDefender.Models;
 using Newtonsoft.Json;
 using Xamarin;
 
-namespace Neudesic.Tastings.Services
+namespace Neudesic.AgileDefender.Services
 {
     public class TastingService : ITastingService
     {

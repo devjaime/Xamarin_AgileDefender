@@ -1,7 +1,7 @@
-﻿using Neudesic.Tastings.Views;
+﻿using Neudesic.AgileDefender.Views;
 using Xamarin.Forms;
 
-namespace Neudesic.Tastings
+namespace Neudesic.AgileDefender
 {
     public partial class App : Application
     {

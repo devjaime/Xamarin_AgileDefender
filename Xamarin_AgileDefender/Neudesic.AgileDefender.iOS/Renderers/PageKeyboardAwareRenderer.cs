@@ -1,12 +1,12 @@
 using Foundation;
-using Neudesic.Tastings.iOS.Renderers;
-using Neudesic.Tastings.Views;
+using Neudesic.AgileDefender.iOS.Renderers;
+using Neudesic.AgileDefender.Views;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer(typeof(PageKeyboardAware), typeof(PageKeyboardAwareRenderer))]
-namespace Neudesic.Tastings.iOS.Renderers
+namespace Neudesic.AgileDefender.iOS.Renderers
 {
     public class PageKeyboardAwareRenderer : PageRenderer
     {
