@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neudesic.AgileDefender", "Xamarin_AgileDefender\Neudesic.AgileDefender\Neudesic.AgileDefender.csproj", "{D64B4546-E8B1-4C01-887E-E53FCF7DBFED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neudesic.AgileDefender", "Neudesic.AgileDefender\Neudesic.AgileDefender\Neudesic.AgileDefender.csproj", "{D64B4546-E8B1-4C01-887E-E53FCF7DBFED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neudesic.AgileDefender.Droid", "Xamarin_AgileDefender\Neudesic.AgileDefender.Droid\Neudesic.AgileDefender.Droid.csproj", "{431061DB-68A2-4168-8F8A-A35E52392874}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neudesic.AgileDefender.Droid", "Neudesic.AgileDefender\Neudesic.AgileDefender.Droid\Neudesic.AgileDefender.Droid.csproj", "{431061DB-68A2-4168-8F8A-A35E52392874}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neudesic.AgileDefender.iOS", "Xamarin_AgileDefender\Neudesic.AgileDefender.iOS\Neudesic.AgileDefender.iOS.csproj", "{1197840D-2141-4109-983E-94CC8B505D65}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neudesic.AgileDefender.iOS", "Neudesic.AgileDefender\Neudesic.AgileDefender.iOS\Neudesic.AgileDefender.iOS.csproj", "{1197840D-2141-4109-983E-94CC8B505D65}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{43380F10-152B-4F91-9584-2208F5068C08}"
 	ProjectSection(SolutionItems) = preProject
