@@ -17,7 +17,7 @@ namespace Neudesic.AgileDefender.Droid
 			base.OnCreate (bundle);
 
 			global::Xamarin.Forms.Forms.Init (this, bundle);
-			LoadApplication (new Neudesic.AgileDefender.App ());
+			LoadApplication (new Neudesic.AgileDefender.Droid.MainActivity ());
 		}
 	}
 }

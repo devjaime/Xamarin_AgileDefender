@@ -23,7 +23,7 @@ namespace Neudesic.AgileDefender.iOS
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
 			global::Xamarin.Forms.Forms.Init ();
-			LoadApplication (new Neudesic.AgileDefender.App ());
+			LoadApplication (new Neudesic.AgileDefender.iOS ());
 
 			return base.FinishedLaunching (app, options);
 		}
