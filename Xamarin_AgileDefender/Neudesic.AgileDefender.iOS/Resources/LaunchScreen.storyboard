@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="X5k-f2-b5h">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="gAE-YM-kbH">
+            <objects>
+                <viewController id="X5k-f2-b5h" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y8P-hJ-Z43"/>
+                        <viewControllerLayoutGuide type="bottom" id="9ZL-r4-8FZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yd7-JS-zBw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="45" translatesAutoresizingMaskIntoConstraints="NO" image="launch.png" misplaced="YES">
+                                <rect key="frame" x="240" y="174" width="160" height="240"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="86" y="164" width="160" height="240"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="45" firstAttribute="centerX" secondItem="yd7-JS-zBw" secondAttribute="centerX" constant="0.0" id="46"/>
+                            <constraint firstItem="yd7-JS-zBw" firstAttribute="centerY" secondItem="45" secondAttribute="centerY" constant="0.0" id="47"/>
+                            <constraint firstItem="yd7-JS-zBw" firstAttribute="bottom" secondItem="45" secondAttribute="bottom" constant="0.0" id="61"/>
+                            <constraint firstItem="yd7-JS-zBw" firstAttribute="trailing" secondItem="45" secondAttribute="trailing" constant="0.0" id="62"/>
+                            <constraint firstItem="45" firstAttribute="top" secondItem="yd7-JS-zBw" secondAttribute="top" constant="0.0" id="63"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="61"/>
+                                <exclude reference="62"/>
+                                <exclude reference="63"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="61"/>
+                                <include reference="62"/>
+                                <include reference="63"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XAI-xm-WK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="349" y="339"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon-60.png" width="180" height="180"/>
+        <image name="Default-568h.png" width="640" height="1136"/>
+        <image name="Default-Portrait.png" width="768" height="1004"/>
+        <image name="Default.png" width="640" height="960"/>
+        <image name="Fonts/GreatVibes-Regular.ttf" width="0" height="0"/>
+        <image name="Fonts/SourceSansPro-Bold.ttf" width="0" height="0"/>
+        <image name="Fonts/SourceSansPro-Light.ttf" width="0" height="0"/>
+        <image name="Fonts/SourceSansPro-Regular.ttf" width="0" height="0"/>
+        <image name="Fonts/SourceSansPro-Semibold.ttf" width="0" height="0"/>
+        <image name="Icon-76.png" width="76" height="76"/>
+        <image name="Icon-Small-40.png" width="40" height="40"/>
+        <image name="Icon-Small.png" width="87" height="87"/>
+        <image name="Images/CellBanner.png" width="640" height="77"/>
+        <image name="Images/DetailBanner.png" width="640" height="100"/>
+        <image name="Images/NeuLogo.png" width="500" height="210"/>
+        <image name="Images/ScoreRadial.png" width="100" height="100"/>
+        <image name="Images/SignInBg.png" width="1242" height="2208"/>
+        <image name="Images/VoteCallout.png" width="46" height="46"/>
+        <image name="Images/VoteDecrement.png" width="50" height="50"/>
+        <image name="Images/VoteIncrement.png" width="50" height="50"/>
+        <image name="launch.png" width="1242" height="2208"/>
+    </resources>
+</document>

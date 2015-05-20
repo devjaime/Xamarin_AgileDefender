@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:PageKeyboardAware xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Neudesic.Tastings.Views;assembly=Neudesic.Tastings"
+             x:Class="Neudesic.Tastings.Views.SignInPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="WelcomeStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="XAlign" Value="Center" />
+                <Setter Property="FontFamily">
+                    <OnPlatform x:TypeArguments="x:String"
+                        iOS="Great Vibes"
+                        Android="GreatVibes-Regular.ttf"
+                        WinPhone="\Assets\Fonts\GreatVibes-Regular.ttf#Great Vibes" />
+                </Setter>
+                <Setter Property="FontSize">
+                    <OnPlatform x:TypeArguments="x:Double"
+                        iOS="20"
+                        Android="20"
+                        WinPhone="24" />
+                </Setter>
+            </Style>
+            <Style x:Key="LineEntryStyle" TargetType="local:LineEntry">
+                <Setter Property="BorderColor" Value="White" />
+                <Setter Property="PlaceholderColor" Value="White" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontFamily">
+                    <OnPlatform x:TypeArguments="x:String"
+                        iOS="Source Sans Pro Regular"
+                        Android="SourceSansPro-Regular.ttf"
+                        WinPhone="\Assets\Fonts\SourceSansPro-Regular.ttf#Source Sans Pro Regular" />
+                </Setter>
+            </Style>
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BorderColor" Value="White" />
+                <Setter Property="BorderRadius" Value="20" />
+                <Setter Property="BorderWidth" Value="2" />
+                <Setter Property="WidthRequest" Value="150" />
+                <Setter Property="FontFamily">
+                    <OnPlatform x:TypeArguments="x:String"
+                        iOS="Source Sans Pro Semibold"
+                        Android="SourceSansPro-Semibold.ttf"
+                        WinPhone="\Assets\Fonts\SourceSansPro-Semibold.ttf#Source Sans Pro Semibold" />
+                </Setter>
+                <Setter Property="FontSize">
+                    <OnPlatform x:TypeArguments="x:Double"
+                        iOS="18"
+                        Android="18"
+                        WinPhone="18" />
+                </Setter>
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+            <Style x:Key="ActivityIndicatorStyle" TargetType="ActivityIndicator">
+                <Setter Property="Color" Value="White" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <RelativeLayout>
+        
+        <Image Aspect="Fill"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
+            <Image.Source>
+                <OnPlatform x:TypeArguments="ImageSource"
+                    iOS="Images/SignInBg"
+                    Android="SignInBg.png"
+                    WinPhone="Images/SignInBg.png" />
+            </Image.Source>
+        </Image>
+        
+        <Grid RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+              RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+              RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
+              RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Grid.Column="0">
+                <Image>
+                    <Image.Source>
+                        <OnPlatform x:TypeArguments="ImageSource"
+                            iOS="Images/NeuLogo"
+                            Android="NeuLogo.png"
+                            WinPhone="Images/NeuLogo.png" />
+                    </Image.Source>
+                </Image>
+                <local:LabelWithCustomFont Text="Welcome to the Wine App" Style="{StaticResource WelcomeStyle}" />
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.Column="0">
+                <StackLayout Spacing="15">
+                    <local:LineEntry Placeholder="User Name"
+                                     Text="{Binding Username, Mode=TwoWay}"
+                                     Style="{StaticResource LineEntryStyle}" />
+                    
+                    <local:LineEntry Placeholder="Code"
+                                     Text="{Binding EventCode, Mode=TwoWay}"
+                                     Style="{StaticResource LineEntryStyle}" />
+                    
+                    <local:LineEntry Placeholder="Email"
+                                     Text="{Binding Email, Mode=TwoWay}"
+                                     Style="{StaticResource LineEntryStyle}" />
+                </StackLayout>
+                <StackLayout Padding="20">
+                    <local:ButtonWithCustomFont Text="Sign In"
+                                                Style="{StaticResource ButtonStyle}"
+                                                Command="{Binding SignInCommand}" />
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+        
+        <ActivityIndicator Style="{StaticResource ActivityIndicatorStyle}"
+                           IsVisible="{Binding IsBusy}"
+                           IsRunning="{Binding IsBusy}"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5}"
+                           RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"/>
+        
+    </RelativeLayout>
+
+</local:PageKeyboardAware>
