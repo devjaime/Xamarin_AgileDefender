@@ -13,7 +13,7 @@
 	<key>MinimumOSVersion</key>
 	<string>7.0</string>
 	<key>CFBundleDisplayName</key>
-	<string>Neudesic Tastings</string>
+	<string>Agile Defender</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.neudesic.agiledefender</string>
 	<key>CFBundleIconFiles</key>
