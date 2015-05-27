@@ -62,7 +62,7 @@
 
     <RelativeLayout>
         
-        <Image Aspect="Fill"
+        <!--<Image Aspect="Fill"
                RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
                RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=0}"
                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
@@ -70,10 +70,10 @@
             <Image.Source>
                 <OnPlatform x:TypeArguments="ImageSource"
                     iOS="Images/SignInBg"
-                    Android="SignInBg.png"
+                    Android="Images/SignInBg"
                     WinPhone="Images/SignInBg.png" />
             </Image.Source>
-        </Image>
+        </Image>-->
         
         <Grid RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
               RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=0}"
@@ -87,33 +87,35 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Grid.Column="0">
+            <StackLayout HorizontalOptions="Center" Padding="20" VerticalOptions="Center" Grid.Row="0" Grid.Column="0">
                 <Image>
                     <Image.Source>
                         <OnPlatform x:TypeArguments="ImageSource"
-                            iOS="Images/NeuLogo"
-                            Android="NeuLogo.png"
-                            WinPhone="Images/NeuLogo.png" />
+                            iOS="Images/agile_defender_logo_gray"
+                            Android="Images/agile_defender_logo_gray"
+                            WinPhone="Images/agile_defender_logo_gray.png" />
                     </Image.Source>
                 </Image>
-                <local:LabelWithCustomFont Text="Welcome to the Wine App" Style="{StaticResource WelcomeStyle}" />
+                <Label Text="Welcome to the Agile Defender" HorizontalOptions="Center" />
+                <!--<local:LabelWithCustomFont Text="Welcome to the Wine App" Style="{StaticResource WelcomeStyle}" />-->
             </StackLayout>
 
-            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.Column="0">
-                <StackLayout Spacing="15">
-                    <local:LineEntry Placeholder="User Name"
+            <StackLayout Padding="20" Spacing="10" VerticalOptions="Center" Grid.Row="1" Grid.Column="0">
+                <StackLayout Spacing="5">
+                  
+                    <local:LineEntry Placeholder="user name" HorizontalOptions="FillAndExpand"
                                      Text="{Binding Username, Mode=TwoWay}"
                                      Style="{StaticResource LineEntryStyle}" />
                     
-                    <local:LineEntry Placeholder="Code"
+                    <!--<local:LineEntry Placeholder="code"
                                      Text="{Binding EventCode, Mode=TwoWay}"
-                                     Style="{StaticResource LineEntryStyle}" />
+                                     Style="{StaticResource LineEntryStyle}" />-->
                     
-                    <local:LineEntry Placeholder="Email"
-                                     Text="{Binding Email, Mode=TwoWay}"
+                    <local:LineEntry Placeholder="password" IsPassword="True"
+                                     Text="{Binding Password, Mode=TwoWay}"
                                      Style="{StaticResource LineEntryStyle}" />
                 </StackLayout>
-                <StackLayout Padding="20">
+                <StackLayout Padding="10">
                     <local:ButtonWithCustomFont Text="Sign In"
                                                 Style="{StaticResource ButtonStyle}"
                                                 Command="{Binding SignInCommand}" />

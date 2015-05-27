@@ -60,8 +60,7 @@ namespace Neudesic.AgileDefender.Helpers
             }
             catch (Exception ex)
             {
-                // Log error in Xamarin.Insights
-                Insights.Report(ex, ReportSeverity.Error);
+                Insights.Report(ex, Insights.Severity.Error);
             }
 
 

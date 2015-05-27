@@ -1,4 +1,3 @@
-// Helpers/Settings.cs
 using Refractored.Xam.Settings;
 using Refractored.Xam.Settings.Abstractions;
 
@@ -13,22 +12,22 @@ namespace Neudesic.AgileDefender.Helpers
     {
         private static ISettings AppSettings
         {
-            get
-            {
-                return CrossSettings.Current;
-            }
+            get { return CrossSettings.Current; }
         }
 
-        #region Setting Constants
-
+        private const string SettingsKey = "settings_key";
+        private static readonly string SettingsDefault = string.Empty;
         private const string EventCodeKey = "eventCode";
         private const string UsernameKey = "username";
         private const string UserIdKey = "userId";
         private const string UserEmailKey = "userEmail";
-        private static readonly string SettingsDefault = null;
         private const int UserIdDefault = 0;
 
-        #endregion
+        public static string GeneralSettings
+        {
+            get { return AppSettings.GetValueOrDefault(SettingsKey, SettingsDefault); }
+            set { AppSettings.AddOrUpdateValue(SettingsKey, value); }
+        }
 
         public static string EventCode
         {
@@ -53,5 +52,6 @@ namespace Neudesic.AgileDefender.Helpers
             get { return AppSettings.GetValueOrDefault(UserEmailKey, SettingsDefault); }
             set { AppSettings.AddOrUpdateValue(UserEmailKey, value); }
         }
+
     }
 }

@@ -100,8 +100,7 @@ namespace Neudesic.AgileDefender.ViewModels
             }
             catch (Exception ex)
             {
-                // Log error in Xamarin.Insights
-                Insights.Report(ex, ReportSeverity.Error);
+                Insights.Report(ex, Insights.Severity.Error);
 
                 // Send message to inform user that Sign In failed
                 MessagingCenter.Send(this, "SignInFailed");

@@ -31,7 +31,7 @@ namespace Neudesic.AgileDefender.Services
             }
             catch (Exception ex)
             {
-                Insights.Report(ex, ReportSeverity.Error);
+                Insights.Report(ex, Insights.Severity.Error);
                 throw;
             }
         }
