@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Neudesic.AgileDefender.Views;assembly=Neudesic.AgileDefender"
+             x:Class="Neudesic.AgileDefender.Views.TastingItemDetailsPage"
+             Title="{Binding TastingItem.Title}">
+
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="LabelStyle-Bold18" TargetType="Label">
+        <Setter Property="TextColor">
+          <OnPlatform x:TypeArguments="Color"
+              iOS="#00467E"
+              Android="White"
+              WinPhone="White" />
+        </Setter>
+        <Setter Property="FontFamily">
+          <OnPlatform x:TypeArguments="x:String"
+              iOS="Source Sans Pro Bold"
+              Android="SourceSansPro-Bold.ttf"
+              WinPhone="\Assets\Fonts\SourceSansPro-Bold.ttf#Source Sans Pro Bold" />
+        </Setter>
+        <Setter Property="FontSize">
+          <OnPlatform x:TypeArguments="x:Double"
+              iOS="18"
+              Android="18"
+              WinPhone="18" />
+        </Setter>
+        <Setter Property="FontAttributes" Value="Bold" />
+      </Style>
+      <Style x:Key="LabelStyle-Regular14" TargetType="Label">
+        <Setter Property="TextColor">
+          <OnPlatform x:TypeArguments="Color"
+              iOS="#7A7A7A"
+              Android="White"
+              WinPhone="White" />
+        </Setter>
+        <Setter Property="FontFamily">
+          <OnPlatform x:TypeArguments="x:String"
+              iOS="Source Sans Pro Regular"
+              Android="SourceSansPro-Regular.ttf"
+              WinPhone="\Assets\Fonts\SourceSansPro-Regular.ttf#Source Sans Pro Regular" />
+        </Setter>
+        <Setter Property="FontSize">
+          <OnPlatform x:TypeArguments="x:Double"
+              iOS="14"
+              Android="14"
+              WinPhone="14" />
+        </Setter>
+      </Style>
+      <Style x:Key="LabelStyle-Regular12" TargetType="Label">
+        <Setter Property="TextColor">
+          <OnPlatform x:TypeArguments="Color"
+              iOS="#00467E"
+              Android="White"
+              WinPhone="White" />
+        </Setter>
+        <Setter Property="FontFamily">
+          <OnPlatform x:TypeArguments="x:String"
+              iOS="Source Sans Pro Regular"
+              Android="SourceSansPro-Regular.ttf"
+              WinPhone="\Assets\Fonts\SourceSansPro-Regular.ttf#Source Sans Pro Regular" />
+        </Setter>
+        <Setter Property="FontSize">
+          <OnPlatform x:TypeArguments="x:Double"
+              iOS="12"
+              Android="12"
+              WinPhone="12" />
+        </Setter>
+      </Style>
+      <Style x:Key="LabelStyle-Regular11" TargetType="Label">
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="FontFamily">
+          <OnPlatform x:TypeArguments="x:String"
+              iOS="Source Sans Pro Regular"
+              Android="SourceSansPro-Regular.ttf"
+              WinPhone="\Assets\Fonts\SourceSansPro-Regular.ttf#Source Sans Pro Regular" />
+        </Setter>
+        <Setter Property="FontSize">
+          <OnPlatform x:TypeArguments="x:Double"
+              iOS="11"
+              Android="11"
+              WinPhone="11" />
+        </Setter>
+      </Style>
+      <Style x:Key="VoteScoreLabelStyle-Bold12" TargetType="Label">
+        <Setter Property="TextColor" Value="#F58220" />
+        <Setter Property="XAlign" Value="Center" />
+        <Setter Property="FontFamily">
+          <OnPlatform x:TypeArguments="x:String"
+              iOS="Source Sans Pro Bold"
+              Android="SourceSansPro-Bold.ttf"
+              WinPhone="\Assets\Fonts\SourceSansPro-Bold.ttf#Source Sans Pro Bold" />
+        </Setter>
+        <Setter Property="FontSize">
+          <OnPlatform x:TypeArguments="x:Double"
+              iOS="12"
+              Android="12"
+              WinPhone="12" />
+        </Setter>
+        <Setter Property="FontAttributes" Value="Bold" />
+      </Style>
+      <Style x:Key="SliderStyle" TargetType="Slider">
+        <Setter Property="WidthRequest" Value="120" />
+        <Setter Property="HeightRequest" Value="50" />
+      </Style>
+      <Style x:Key="ButtonStyle" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="BorderColor" Value="White" />
+        <Setter Property="BorderRadius" Value="10" />
+        <Setter Property="BorderWidth" Value="1" />
+        <Setter Property="WidthRequest" Value="50" />
+        <Setter Property="HeightRequest" Value="30" />
+        <Setter Property="FontFamily">
+          <OnPlatform x:TypeArguments="x:String"
+              iOS="Source Sans Pro Semibold"
+              Android="SourceSansPro-Semibold.ttf"
+              WinPhone="\Assets\Fonts\SourceSansPro-Semibold.ttf#Source Sans Pro Semibold" />
+        </Setter>
+        <Setter Property="FontSize">
+          <OnPlatform x:TypeArguments="x:Double"
+              iOS="12"
+              Android="12"
+              WinPhone="12" />
+        </Setter>
+        <Setter Property="FontAttributes" Value="Bold" />
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <ScrollView>
+
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="250" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+
+      <RelativeLayout Grid.Row="0" Grid.Column="0">
+
+        <Image Aspect="Fill"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=Constant, Constant=250}"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+               Source="{Binding TastingItem.DetailImageUrl}">
+        </Image>
+
+        <Image x:Name="BannerImage"
+               Aspect="Fill"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Constant=-50}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=Constant, Constant=50}"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
+          <Image.Source>
+            <OnPlatform x:TypeArguments="ImageSource"
+                iOS="Images/DetailBanner.png"
+                Android="DetailBanner.png"
+                WinPhone="Images/DetailBanner.png" />
+          </Image.Source>
+        </Image>
+
+        <StackLayout Orientation="Horizontal"
+                     Padding="10"
+                     VerticalOptions="CenterAndExpand"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=BannerImage, Property=Y}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=BannerImage, Property=Height}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=BannerImage, Property=Width}"
+                             >
+
+          <Image x:Name="VoteDecrement">
+            <Image.Source>
+              <OnPlatform x:TypeArguments="ImageSource"
+                  iOS="Images/VoteDecrement.png"
+                  Android="VoteDecrement.png"
+                  WinPhone="Images/VoteDecrement.png" />
+            </Image.Source>
+            <Image.GestureRecognizers>
+              <TapGestureRecognizer
+                  Command="{Binding DecrementVoteCommand}" />
+            </Image.GestureRecognizers>
+          </Image>
+
+          <local:LabelWithCustomFont
+              Text="0"
+              VerticalOptions="Center"
+              HorizontalOptions="End"
+              Style="{StaticResource LabelStyle-Regular11}" />
+
+          <Slider
+              Minimum="0"
+              Maximum="100"
+              HorizontalOptions="FillAndExpand"
+              VerticalOptions="Center"
+              Style="{StaticResource SliderStyle}"
+              Value="{Binding VoteScore, Mode=TwoWay}" />
+
+          <local:LabelWithCustomFont
+              Text="100"
+              VerticalOptions="Center"
+              HorizontalOptions="Start"
+              Style="{StaticResource LabelStyle-Regular11}" />
+
+          <Image x:Name="VoteIncrement">
+            <Image.Source>
+              <OnPlatform x:TypeArguments="ImageSource"
+                  iOS="Images/VoteIncrement.png"
+                  Android="VoteIncrement.png"
+                  WinPhone="Images/VoteIncrement.png" />
+            </Image.Source>
+            <Image.GestureRecognizers>
+              <TapGestureRecognizer
+                  Command="{Binding IncrementVoteCommand}" />
+            </Image.GestureRecognizers>
+          </Image>
+
+          <local:ButtonWithCustomFont Text="Vote"
+                                      Style="{StaticResource ButtonStyle}"
+                                      Command="{Binding VoteCommand}" />
+        </StackLayout>
+
+        <Image x:Name="VoteCalloutImage"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=BannerImage, Property=Width, Constant=-45}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=BannerImage, Property=Y, Constant=-15}"
+               WidthRequest="23"
+               HeightRequest="23">
+          <Image.Source>
+            <OnPlatform x:TypeArguments="ImageSource"
+                        iOS="Images/VoteCallout"
+                        Android="VoteCallout.png"
+                        WinPhone="Images/VoteCallout.png" />
+          </Image.Source>
+        </Image>
+
+        <local:LabelWithCustomFont Text="{Binding VoteScore, Mode=OneWay}"
+                                   Style="{StaticResource VoteScoreLabelStyle-Bold12}"
+                                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=VoteCalloutImage, Property=X, Constant=0}"
+                                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=VoteCalloutImage, Property=Y, Constant=3}"
+                                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, Property=Width, ElementName=VoteCalloutImage}" />
+
+      </RelativeLayout>
+
+      <StackLayout Grid.Row="1" Grid.Column="0" Padding="10" VerticalOptions="Start">
+
+        <local:LabelWithCustomFont Text="{Binding TastingItem.Title}"
+                Style="{StaticResource LabelStyle-Bold18}" />
+        <local:LabelWithCustomFont Text="{Binding TastingItem.Subtitle}"
+                Style="{StaticResource LabelStyle-Regular12}" />
+        <local:LabelWithCustomFont Text="{Binding TastingItem.Description}"
+               Style="{StaticResource LabelStyle-Regular14}" />
+
+      </StackLayout>
+
+    </Grid>
+
+  </ScrollView>
+
+</ContentPage>

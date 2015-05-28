@@ -1,8 +1,9 @@
 ﻿using System.Threading.Tasks;
 using System.Windows.Input;
+using Xamarin.Forms;
+
 using Neudesic.AgileDefender.Services;
 using Neudesic.AgileDefender.Views;
-using Xamarin.Forms;
 
 namespace Neudesic.AgileDefender.ViewModels
 {

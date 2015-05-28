@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin;
 using Xamarin.Forms;
 using System.Reflection;
+
 using Neudesic.AgileDefender.Views;
-using Xamarin;
 
 namespace Neudesic.AgileDefender.Helpers
 {

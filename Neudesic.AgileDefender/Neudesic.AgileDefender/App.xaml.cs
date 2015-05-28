@@ -1,5 +1,6 @@
-﻿//using Neudesic.AgileDefender.Views;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
+
+using Neudesic.AgileDefender.Views;
 
 namespace Neudesic.AgileDefender
 {
@@ -10,13 +11,13 @@ namespace Neudesic.AgileDefender
             InitializeComponent();
 
             // The root page of your application
-            //var mainPage = new SignInPage();
-            //var navPage = new NavigationPage(mainPage)
-            //{
-            //    BarTextColor = Color.White,
-            //    BarBackgroundColor = Color.FromHex("#d3d3d3")
-            //};
-            //MainPage = navPage;
+            var mainPage = new SignInPage();
+            var navPage = new NavigationPage(mainPage)
+            {
+                BarTextColor = Color.White,
+                BarBackgroundColor = Color.FromHex("#d3d3d3")
+            };
+            MainPage = navPage;
         }
 
         protected override void OnStart()

@@ -6,29 +6,29 @@ using Neudesic.AgileDefender.ViewModels;
 
 namespace Neudesic.AgileDefender.Views
 {
-    public partial class EventPage : ContentPage
+    public partial class TakeSurveyPage
     {
-        public EventViewModel ViewModel
+        public TakeSurveyViewModel ViewModel
         {
-            get { return BindingContext as EventViewModel; }
+            get { return BindingContext as TakeSurveyViewModel; }
             set { BindingContext = value; }
         }
 
-        public EventPage()
+        public TakeSurveyPage()
         {
             InitializeComponent();
 
             NavigationPage.SetHasNavigationBar(this, false);
             NavigationPage.SetBackButtonTitle(this, string.Empty);
 
-            ViewModel = new EventViewModel(Navigation);
+            ViewModel = new TakeSurveyViewModel(Navigation);
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
 
-            Insights.Track(AppConstants.EventPage);
+            Insights.Track(AppConstants.SurveyPage);
         }
     }
 }

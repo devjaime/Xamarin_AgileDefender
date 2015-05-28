@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Neudesic.AgileDefender.Views;assembly=Neudesic.AgileDefender"
+             x:Class="Neudesic.AgileDefender.Views.TastingItemListPage"
+             Title="Discover Wines">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="ScoreLabelStyle-Bold20" TargetType="Label">
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="XAlign" Value="Center" />
+        <Setter Property="FontFamily">
+          <OnPlatform x:TypeArguments="x:String"
+              iOS="Source Sans Pro Bold"
+              Android="SourceSansPro-Bold.ttf"
+              WinPhone="\Assets\Fonts\SourceSansPro-Bold.ttf#Source Sans Pro Bold" />
+        </Setter>
+        <Setter Property="FontSize">
+          <OnPlatform x:TypeArguments="x:Double"
+              iOS="20"
+              Android="20"
+              WinPhone="20" />
+        </Setter>
+        <Setter Property="FontAttributes" Value="Bold" />
+      </Style>
+      <Style x:Key="LabelStyle-Bold18" TargetType="Label">
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="XAlign" Value="Center" />
+        <Setter Property="FontFamily">
+          <OnPlatform x:TypeArguments="x:String"
+              iOS="Source Sans Pro Bold"
+              Android="SourceSansPro-Bold.ttf"
+              WinPhone="\Assets\Fonts\SourceSansPro-Bold.ttf#Source Sans Pro Bold" />
+        </Setter>
+        <Setter Property="FontSize">
+          <OnPlatform x:TypeArguments="x:Double"
+              iOS="18"
+              Android="18"
+              WinPhone="18" />
+        </Setter>
+        <Setter Property="FontAttributes" Value="Bold" />
+      </Style>
+      <Style x:Key="LabelStyle-Regular12" TargetType="Label">
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="XAlign" Value="Center" />
+        <Setter Property="FontFamily">
+          <OnPlatform x:TypeArguments="x:String"
+              iOS="Source Sans Pro Regular"
+              Android="SourceSansPro-Regular.ttf"
+              WinPhone="\Assets\Fonts\SourceSansPro-Regular.ttf#Source Sans Pro Regular" />
+        </Setter>
+        <Setter Property="FontSize">
+          <OnPlatform x:TypeArguments="x:Double"
+              iOS="12"
+              Android="12"
+              WinPhone="12" />
+        </Setter>
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <ListView x:Name="ItemsListView"
+            RowHeight="170"
+            ItemsSource="{Binding TastingItems}"
+            IsPullToRefreshEnabled="True"
+            RefreshCommand="{Binding RefreshCommand}"
+            IsRefreshing="{Binding IsRefreshing, Mode=OneWay}">
+
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+
+          <RelativeLayout>
+
+            <Image Aspect="Fill"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                   Source="{Binding ListImageUrl}">
+            </Image>
+
+            <Image x:Name="ScoreRadialImage"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Constant=-60}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=10}"
+                   WidthRequest="50"
+                   HeightRequest="50">
+              <Image.Source>
+                <OnPlatform x:TypeArguments="ImageSource"
+                            iOS="Images/ScoreRadial"
+                            Android="ScoreRadial.png"
+                            WinPhone="Images/ScoreRadial.png" />
+              </Image.Source>
+            </Image>
+
+            <local:LabelWithCustomFont Text="{Binding Score}"
+                                       Style="{StaticResource ScoreLabelStyle-Bold20}"
+                                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, Property=X, ElementName=ScoreRadialImage, Constant=0}"
+                                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, Property=Y, ElementName=ScoreRadialImage, Constant=20}"
+                                       RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, Property=Width, ElementName=ScoreRadialImage}" />
+
+            <Image Aspect="Fill"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Constant=-39}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=Constant, Constant=40}"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
+              <Image.Source>
+                <OnPlatform x:TypeArguments="ImageSource"
+                            iOS="Images/CellBanner"
+                            Android="CellBanner.png"
+                            WinPhone="Images/CellBanner.png" />
+              </Image.Source>
+            </Image>
+
+            <local:LabelWithCustomFont Text="{Binding Title}"
+                   Style="{StaticResource LabelStyle-Bold18}"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=20}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Constant=-37}" />
+            <local:LabelWithCustomFont Text="{Binding Subtitle}"
+                   Style="{StaticResource LabelStyle-Regular12}"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=20}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Constant=-17}" />
+
+          </RelativeLayout>
+
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+
+</ContentPage>
