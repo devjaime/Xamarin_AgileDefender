@@ -1,30 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿//using Neudesic.AgileDefender.Views;
 using Xamarin.Forms;
 
 namespace Neudesic.AgileDefender
 {
-    public class App : Application
+    public partial class App : Application
     {
         public App()
         {
+            InitializeComponent();
+
             // The root page of your application
-            MainPage = new ContentPage
-            {
-                Content = new StackLayout
-                {
-                    VerticalOptions = LayoutOptions.Center,
-                    Children = {
-						new Label {
-							XAlign = TextAlignment.Center,
-							Text = "Welcome to Xamarin Forms!"
-						}
-					}
-                }
-            };
+            //var mainPage = new SignInPage();
+            //var navPage = new NavigationPage(mainPage)
+            //{
+            //    BarTextColor = Color.White,
+            //    BarBackgroundColor = Color.FromHex("#d3d3d3")
+            //};
+            //MainPage = navPage;
         }
 
         protected override void OnStart()
