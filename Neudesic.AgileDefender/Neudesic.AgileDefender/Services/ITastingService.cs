@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+
 using Neudesic.AgileDefender.Models;
 
 namespace Neudesic.AgileDefender.Services
