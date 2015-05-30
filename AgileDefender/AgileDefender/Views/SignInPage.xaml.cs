@@ -18,10 +18,14 @@ namespace AgileDefender.Views
         {
             InitializeComponent();
 
-            Insights.Track("SignInPage");
+            //Insights.Track("SignInPage");
+            var handle = Insights.TrackTime("SignInPage");
+            handle.Start();
 
             this.Title = PageResources.DefaultPageTitle;
             this.BindingContext = new SignInViewModel();
+
+            handle.Stop();
         }
 
         protected override void OnAppearing()
