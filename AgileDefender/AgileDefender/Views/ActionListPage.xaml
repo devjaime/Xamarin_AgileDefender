@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AgileDefender.Views.ActionListPage">
+  <ContentPage.Content>
+    <ListView x:Name="actionListView" RowHeight="70" ItemsSource="{Binding AgileActionItems}">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+
+            <ViewCell.View>
+              <ContentView BackgroundColor="#303030">
+
+                <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+                  <Image HeightRequest="50" Source="{Binding Image}" />
+                  <StackLayout Padding="5,15,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">
+                    <Label Text="{Binding Name}" YAlign="Center" Font="Large" />
+                  </StackLayout>
+                </StackLayout>
+
+              </ContentView>
+            </ViewCell.View>
+              
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </ContentPage.Content>
+  
+</ContentPage>

@@ -1,0 +1,22 @@
+[
+	{
+        "Name": "Daily Scrum",
+        "Image": "https://xamarindevdayscdn.blob.core.windows.net/cdn/scrum_gray.png"
+    },
+    {
+        "Name": "User Stories",
+        "Image": "https://xamarindevdayscdn.blob.core.windows.net/cdn/user_stories_gray.png"
+    },
+    {
+        "Name": "Assigned Open Bugs",
+        "Image": "https://xamarindevdayscdn.blob.core.windows.net/cdn/bugs_gray.png"
+    },
+    {
+        "Name": "Team Members",
+        "Image": "https://xamarindevdayscdn.blob.core.windows.net/cdn/team_gray.png"
+    },
+    {
+        "Name": "App Settings",
+        "Image": "https://xamarindevdayscdn.blob.core.windows.net/cdn/settings_gray.png"
+    }
+]
