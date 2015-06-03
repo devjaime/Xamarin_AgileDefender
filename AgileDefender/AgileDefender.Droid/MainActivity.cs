@@ -21,6 +21,7 @@ namespace AgileDefender.Droid
             Insights.Initialize("5b2e619fbdf4ec79ff1a8097b00e732a8b212ab5", ApplicationContext);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            global::Xamarin.FormsMaps.Init(this, bundle);
             LoadApplication(new App());
         }
     }

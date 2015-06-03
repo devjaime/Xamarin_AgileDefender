@@ -23,14 +23,14 @@ namespace AgileDefender.Services
                 {
                     using (var client = new HttpClient())
                     {
-                        var url = string.Format("{0}/user/getUserByEmail/{1}", baseUrl, emailAddress);
+                        var url = "https://tastings.neudesic.com/api/tastings/key/M134";//"http://localhost:57008/api/v1/user/getUserByEmail?emailAddress=aa";//string.Format("{0}/user/getUserByEmail/{1}", baseUrl, emailAddress);
                         var json = await client.GetStringAsync(url);
-                        var dto = JsonConvert.DeserializeObject<User>(json);
-                        User = new User
-                        {
-                            Name = dto.Name,
-                            EmailAddress = dto.EmailAddress
-                        };
+                        //var dto = JsonConvert.DeserializeObject<User>(json);
+                        //User = new User
+                        //{
+                        //    Name = dto.Name,
+                        //    EmailAddress = dto.EmailAddress
+                        //};
                     }
                 }
             }

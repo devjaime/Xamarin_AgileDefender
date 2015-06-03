@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AgileDefender.Views.ActionListPage">
   <ContentPage.Content>
-    <ListView x:Name="actionListView" RowHeight="70" ItemsSource="{Binding AgileActionItems}">
+    <ListView x:Name="actionListView" RowHeight="70" ItemsSource="{Binding AgileActionItems}" ItemTapped="OnItemTapped">
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>

@@ -23,10 +23,10 @@ namespace AgileDefender.Views
             vm = new ActionViewModel();
             this.BindingContext = vm;
 
-            actionListView.ItemTapped += actionListView_ItemTapped;
+            actionListView.ItemTapped += OnItemTapped;
         }
 
-        private void actionListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        private void OnItemTapped(object sender, ItemTappedEventArgs e)
         {
             if (e != null)
             {
@@ -34,6 +34,7 @@ namespace AgileDefender.Views
                 if (actionSelected != null)
                 {
                     var a = actionSelected;
+                    Navigation.PushAsync(new TeamMembers());
                 }
             }
         }

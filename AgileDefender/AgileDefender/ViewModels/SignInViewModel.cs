@@ -7,53 +7,70 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin;
 using Xamarin.Forms;
-
 using AgileDefender.Services;
 using AgileDefender.Views;
 
 namespace AgileDefender.ViewModels
 {
-    public class SignInViewModel : INotifyPropertyChanged
+    public class SignInViewModel : BaseViewModel
     {
         private UserService userService;
+        private readonly INavigation _navigation;
         private string userName;
         private string userPassword;
 
-        public SignInViewModel()
+        public SignInViewModel(INavigation navigation)
         {
+            userService = new UserService();
+            _navigation = navigation;
+
+        }
+
+        private Command _signInCommand;
+
+        public ICommand SignInCommand
+        {
+            get { return _signInCommand ?? (_signInCommand = new Command(async () => await ExecuteSignInCommand())); }
+        }
+
+        private async Task ExecuteSignInCommand()
+        {
+            if (IsBusy)
+                return;
+
+            IsBusy = true;
+
             try
             {
-                // TODO Implement busy indicator
-                //if (IsBusy)
-                    //return;
 
-                //IsBusy = true;
+                // Call service to load the data for the tasting
+                await userService.GetUser(userName);
 
-                this.SignInCommand = new Command((doWork) =>
-                {
-                    userService = new UserService();
-                
-                    // Call service to validate/load the user
-                    // TODO commented out for now
-                    //await userService.GetUser(userName);
+                // Register user if successful
 
-                    var actionListPage = new ActionListPage
-                    {
-                        //BindingContext = new ActionViewModel(action)
-                    };
-
-                    App.Current.MainPage.Navigation.PushAsync(actionListPage);
-                });
             }
             catch (Exception ex)
             {
-                Insights.Report(ex, Insights.Severity.Critical);
+                // Log error in Xamarin.Insights
+                Insights.Report(ex, Insights.Severity.Error);
+
+                // Send message to inform user that Sign In failed
+                MessagingCenter.Send(this, "SignInFailed");
+
+                return;
             }
+            finally
+            {
+                IsBusy = false;
+            }
+
+            var actionListPage = new ActionListPage
+            {
+                //BindingContext = new ActionViewModel(action)
+            };
+
+            await _navigation.PushAsync(actionListPage);
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public ICommand SignInCommand { get; protected set; }
 
         public string UserName
         {
@@ -80,15 +97,5 @@ namespace AgileDefender.ViewModels
                 }
             }
         }
-
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this,
-                    new PropertyChangedEventArgs(propertyName));
-            }
-        }
-
     }
 }

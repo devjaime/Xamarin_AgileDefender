@@ -23,7 +23,7 @@ namespace AgileDefender.Views
             handle.Start();
 
             this.Title = PageResources.DefaultPageTitle;
-            this.BindingContext = new SignInViewModel();
+            this.BindingContext = new SignInViewModel(Navigation);
 
             handle.Stop();
         }
