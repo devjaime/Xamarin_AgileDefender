@@ -6,12 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 using AgileDefender.Models;
+using AgileDefender.Interface;
 
 namespace AgileDefender.Services
 {
-    public static class AgileActionService
+    public class AgileActionService : IAgileActionService
     {
-        public static ObservableCollection<AgileAction> GetTestData()
+        public ObservableCollection<AgileAction> GetTestData()
         {
             var agileActionItems = new ObservableCollection<AgileAction>();
             

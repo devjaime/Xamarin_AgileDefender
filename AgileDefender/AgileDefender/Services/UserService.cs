@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using AgileDefender.Interface;
+using AgileDefender.Model;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +11,9 @@ using Xamarin;
 
 namespace AgileDefender.Services
 {
-    public class UserService
+    public class UserService : IUserService
     {
-        private string baseUrl = "https://tastings.neudesic.com/api";
+        private string baseUrl = "https://agiledefenderservices.azure-mobile.net/api";
 
         public User User { get; set; }
 
@@ -23,14 +25,14 @@ namespace AgileDefender.Services
                 {
                     using (var client = new HttpClient())
                     {
-                        var url = "https://tastings.neudesic.com/api/tastings/key/M134";//"http://localhost:57008/api/v1/user/getUserByEmail?emailAddress=aa";//string.Format("{0}/user/getUserByEmail/{1}", baseUrl, emailAddress);
+                        var url = string.Format("{0}/v1/user/getUserByEmail/?emailAddress={1}", baseUrl, emailAddress);
                         var json = await client.GetStringAsync(url);
-                        //var dto = JsonConvert.DeserializeObject<User>(json);
-                        //User = new User
-                        //{
-                        //    Name = dto.Name,
-                        //    EmailAddress = dto.EmailAddress
-                        //};
+                        var dto = JsonConvert.DeserializeObject<User>(json);
+                        User = new User
+                        {
+                            Name = dto.Name,
+                            EmailAddress = dto.EmailAddress
+                        };
                     }
                 }
             }

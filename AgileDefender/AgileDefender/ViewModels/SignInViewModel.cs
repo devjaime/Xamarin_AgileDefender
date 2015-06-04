@@ -1,29 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using AgileDefender.Interface;
+using AgileDefender.Setup;
+using AgileDefender.Views;
 using Xamarin;
 using Xamarin.Forms;
-using AgileDefender.Services;
-using AgileDefender.Views;
 
 namespace AgileDefender.ViewModels
 {
     public class SignInViewModel : BaseViewModel
     {
-        private UserService userService;
+        private readonly IUserService userService;
         private readonly INavigation _navigation;
         private string userName;
         private string userPassword;
 
         public SignInViewModel(INavigation navigation)
         {
-            userService = new UserService();
+            userService = ServiceLocator.GetService<IUserService>();
             _navigation = navigation;
-
         }
 
         private Command _signInCommand;

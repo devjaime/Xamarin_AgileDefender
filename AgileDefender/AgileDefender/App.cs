@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AgileDefender.Setup;
 using Xamarin.Forms;
 
 using AgileDefender.Views;
@@ -18,7 +19,7 @@ namespace AgileDefender
             //    Service = await ActionService.GetAll();
             //});
             //task.Wait();
-
+            Bootstrap.Register();
             var signInPage = new SignInPage();
             MainPage = new NavigationPage(signInPage);
         }

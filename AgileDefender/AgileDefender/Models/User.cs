@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace AgileDefender.Services
+namespace AgileDefender.Model
 {
     // TODO move this class to shared library from service layer
     public class User

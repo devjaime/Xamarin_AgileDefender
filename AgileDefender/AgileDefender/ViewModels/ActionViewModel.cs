@@ -1,25 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using Newtonsoft.Json;
-using Xamarin.Forms;
-
+﻿using System.Collections.ObjectModel;
+using AgileDefender.Interface;
 using AgileDefender.Models;
-using AgileDefender.Services;
+using AgileDefender.Setup;
 
 namespace AgileDefender.ViewModels
 {
-    public class ActionViewModel
+    public class ActionViewModel : BaseViewModel
     {
         public ActionViewModel()
         {
+         
+            var agileService = ServiceLocator.GetService<IAgileActionService>();
+            
             // TODO Implement local and/or remote data service
-            AgileActionItems = AgileActionService.GetTestData();
+            AgileActionItems = agileService.GetTestData();
         }
 
         public ObservableCollection<AgileAction> AgileActionItems { get; private set; }
