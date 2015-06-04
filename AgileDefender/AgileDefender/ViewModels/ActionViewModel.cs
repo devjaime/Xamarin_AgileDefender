@@ -9,7 +9,6 @@ namespace AgileDefender.ViewModels
     {
         public ActionViewModel()
         {
-         
             var agileService = ServiceLocator.GetService<IAgileActionService>();
             
             // TODO Implement local and/or remote data service

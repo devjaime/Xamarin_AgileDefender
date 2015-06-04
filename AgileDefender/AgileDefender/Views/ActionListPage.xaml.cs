@@ -14,6 +14,7 @@ namespace AgileDefender.Views
     public partial class ActionListPage : ContentPage
     {
         private ActionViewModel vm;
+        private TeamMembers teamMembersView;
 
         public ActionListPage()
         {
@@ -22,8 +23,6 @@ namespace AgileDefender.Views
             this.Title = PageResources.DefaultPageTitle;
             vm = new ActionViewModel();
             this.BindingContext = vm;
-
-            actionListView.ItemTapped += OnItemTapped;
         }
 
         private void OnItemTapped(object sender, ItemTappedEventArgs e)
@@ -34,7 +33,7 @@ namespace AgileDefender.Views
                 if (actionSelected != null)
                 {
                     var a = actionSelected;
-                    Navigation.PushAsync(new TeamMembers());
+                    Navigation.PushAsync(teamMembersView ?? new TeamMembers());
                 }
             }
         }
