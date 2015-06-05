@@ -5,6 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 using Xamarin;
+using Toasts.Forms.Plugin.iOS;
 
 namespace AgileDefender.iOS
 {
@@ -26,7 +27,11 @@ namespace AgileDefender.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
+            // Xamarin Insights init for iOS
             Insights.Initialize("5b2e619fbdf4ec79ff1a8097b00e732a8b212ab5");
+
+            // Xamarin Forms Toast init for iOS
+            ToastNotificatorImplementation.Init();
 
             return base.FinishedLaunching(app, options);
         }

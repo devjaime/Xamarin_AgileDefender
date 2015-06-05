@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AgileDefender.Interface
+using AgileDefender.Models;
+
+namespace AgileDefender.Services
 {
     public interface IUserService
     {
         Task GetUser(string emailAddress);
+        User User { get; }
     }
 }

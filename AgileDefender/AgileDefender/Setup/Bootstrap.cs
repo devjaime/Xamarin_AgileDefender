@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AgileDefender.Interface;
-using AgileDefender.Services;
 using Autofac;
+
+using AgileDefender.Services;
 
 namespace AgileDefender.Setup
 {

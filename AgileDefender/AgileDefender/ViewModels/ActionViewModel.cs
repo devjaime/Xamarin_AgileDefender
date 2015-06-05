@@ -1,7 +1,8 @@
 ﻿using System.Collections.ObjectModel;
-using AgileDefender.Interface;
+
 using AgileDefender.Models;
 using AgileDefender.Setup;
+using AgileDefender.Services;
 
 namespace AgileDefender.ViewModels
 {

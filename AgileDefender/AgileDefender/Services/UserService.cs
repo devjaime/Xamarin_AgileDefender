@@ -1,13 +1,13 @@
-﻿using AgileDefender.Interface;
-using AgileDefender.Model;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using Xamarin;
+
+using AgileDefender.Models;
 
 namespace AgileDefender.Services
 {
@@ -15,7 +15,7 @@ namespace AgileDefender.Services
     {
         private string baseUrl = "https://agiledefenderservices.azure-mobile.net/api";
 
-        public User User { get; set; }
+        public User User { get; private set; }
 
         public async Task GetUser(string emailAddress)
         {
@@ -42,5 +42,6 @@ namespace AgileDefender.Services
                 throw;
             }
         }
+
     }
 }

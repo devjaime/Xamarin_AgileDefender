@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using AgileDefender.Interface;
-using AgileDefender.Setup;
-using AgileDefender.Views;
 using Xamarin;
 using Xamarin.Forms;
+
+using AgileDefender.Setup;
+using AgileDefender.Views;
+using AgileDefender.Services;
 
 namespace AgileDefender.ViewModels
 {
@@ -35,15 +36,15 @@ namespace AgileDefender.ViewModels
                 return;
 
             IsBusy = true;
-
             try
             {
-
-                // Call service to load the data for the tasting
+                // Get user from web service
                 await userService.GetUser(userName);
 
-                // Register user if successful
-
+                if (!userService.User.IsSuccess)
+                {
+                    var msg = userService.User.ErrorMessage;
+                }
             }
             catch (Exception ex)
             {

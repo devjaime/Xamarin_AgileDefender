@@ -21,6 +21,7 @@ namespace AgileDefender.Views
             InitializeComponent();
 
             this.Title = PageResources.DefaultPageTitle;
+
             vm = new ActionViewModel();
             this.BindingContext = vm;
         }

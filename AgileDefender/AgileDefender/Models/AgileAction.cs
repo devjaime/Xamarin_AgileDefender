@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AgileDefender.Models
 {
-    public class AgileAction
+    public class AgileAction : BaseModel
     {
         public AgileAction(string name, string image)
         {

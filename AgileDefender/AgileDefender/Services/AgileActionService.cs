@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 using AgileDefender.Models;
-using AgileDefender.Interface;
 
 namespace AgileDefender.Services
 {
