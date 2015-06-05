@@ -127,6 +127,9 @@
     <Content Include="Assets\Fonts\SourceSansPro-Light.ttf" />
     <Content Include="Assets\Fonts\SourceSansPro-Regular.ttf" />
     <Content Include="Assets\Fonts\SourceSansPro-Semibold.ttf" />
+    <Content Include="Images\agile_defender_logo.png" />
+    <Content Include="Images\agile_defender_logo_gray.png" />
+    <Content Include="Images\agile_defender_logo_home.png" />
     <Content Include="Properties\_SettingsStarted.txt" />
     <Content Include="README_FIRST.txt" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />

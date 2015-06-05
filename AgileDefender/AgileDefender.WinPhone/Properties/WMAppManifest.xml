@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US" />
-  <App xmlns="" ProductID="{b146c628-be6e-484e-b845-43709365dabc}" Title="NeuWine" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Jon Cortez" Description="Rate top wines with a twist of technology!  NeuWine is a fun and interactive addition to Neudesic’s wine tasting events that allows the user to rate award-winning wines and compare scores in real time with fellow guests and leading wine experts." Publisher="Neudesic LLC" PublisherID="{f1a990ae-18ec-4991-a4e8-e84c17d0fad0}">
-    <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
+  <App xmlns="" ProductID="{b146c628-be6e-484e-b845-43709365dabc}" Title="Agile Defender" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Jon Cortez" Description="" Publisher="Neudesic LLC" PublisherID="{f1a990ae-18ec-4991-a4e8-e84c17d0fad0}">
+    <IconPath IsRelative="true" IsResource="false">Images\agile_defender_logo.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
       <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
@@ -19,9 +19,9 @@
     <Tokens>
       <PrimaryToken TokenID="PhoneApp1Token" TaskName="_default">
         <TemplateFlip>
-          <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
+          <SmallImageURI IsRelative="true" IsResource="false">Images\agile_defender_logo_gray.png</SmallImageURI>
           <Count>0</Count>
-          <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
+          <BackgroundImageURI IsRelative="true" IsResource="false">Images\agile_defender_logo_gray.png</BackgroundImageURI>
           <Title>Neudesic Tastings</Title>
           <BackContent>
           </BackContent>
