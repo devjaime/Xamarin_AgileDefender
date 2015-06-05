@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.xamarin.AgileDefender">
 	<uses-sdk android:minSdkVersion="15" />
 	<application android:label="Agile Defender">
-		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyCRto90IEOZ87tcu7ihnV6kIdv5a9Xls7s" />
+		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBTrS_I2FmZnS8McW2vpHTggpM3pDhRRqM" />
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 	</application>
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />

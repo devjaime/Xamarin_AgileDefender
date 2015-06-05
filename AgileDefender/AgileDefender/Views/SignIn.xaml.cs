@@ -12,14 +12,14 @@ using AgileDefender.Helpers;
 
 namespace AgileDefender.Views
 {
-    public partial class SignInPage : ContentPage
+    public partial class SignIn : ContentPage
     {
-        public SignInPage()
+        public SignIn()
         {
             InitializeComponent();
 
-            //Insights.Track("SignInPage");
-            var handle = Insights.TrackTime("SignInPage");
+            //Insights.Track("SignIn");
+            var handle = Insights.TrackTime("SignIn");
             handle.Start();
 
             this.Title = PageResources.DefaultPageTitle;

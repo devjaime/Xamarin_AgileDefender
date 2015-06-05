@@ -14,7 +14,9 @@ namespace AgileDefender.Views
         public TeamMembers()
         {
             InitializeComponent();
+
             this.Title = PageResources.DefaultPageTitle;
+
             MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(
                 new Position(32.8946723, -96.9774144), Distance.FromMiles(1)));
 
@@ -27,6 +29,8 @@ namespace AgileDefender.Views
                 Address = "Starbucks"
             };
             MyMap.Pins.Add(pin);
+
+            // CJP TODO, need add MediaPlayer for pop sound playback foreach teamMember
             
         }
     }

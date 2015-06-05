@@ -159,6 +159,7 @@
     <AndroidResource Include="Resources\drawable-xhdpi\VoteDecrement.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\VoteIncrement.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\agile_defender_logo_home.png" />
+    <AndroidResource Include="Resources\raw\pop.mp3" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AgileDefender\AgileDefender.csproj">

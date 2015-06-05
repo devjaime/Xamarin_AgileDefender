@@ -30,6 +30,7 @@ namespace AgileDefender.Droid
 
             LoadApplication(new App());
         }
+
     }
 }
 

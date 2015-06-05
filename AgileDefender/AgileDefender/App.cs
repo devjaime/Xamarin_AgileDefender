@@ -19,9 +19,10 @@ namespace AgileDefender
             //    Service = await ActionService.GetAll();
             //});
             //task.Wait();
+
             Bootstrap.Register();
-            var signInPage = new SignInPage();
-            MainPage = new NavigationPage(signInPage);
+            var signInView = new SignIn();
+            MainPage = new NavigationPage(signInView);
         }
 
         protected override void OnStart()
