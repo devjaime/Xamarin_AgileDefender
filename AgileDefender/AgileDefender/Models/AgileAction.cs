@@ -4,17 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using AgileDefender.Helpers;
+
 namespace AgileDefender.Models
 {
     public class AgileAction : BaseModel
     {
-        public AgileAction(string name, string image)
+        public AgileAction(PageResourceName pageResourceName, string title, string image)
         {
-            this.Name = name;
-            this.Image = image;
+            PageResourceName = pageResourceName;
+            Title = title;
+            Image = image;
         }
 
-        public string Name { get; set; }
+        public PageResourceName PageResourceName { get; set; }
+        public string Title { get; set; }
         public string Image { get; set; }
     }
 }

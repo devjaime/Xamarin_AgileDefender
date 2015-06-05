@@ -57,6 +57,9 @@
     </Compile>
     <Compile Include="Views\CustomRenderers.cs" />
     <Compile Include="Views\LineEntry.cs" />
+    <Compile Include="Views\UserSettings.xaml.cs">
+      <DependentUpon>UserSettings.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\SignInPage.xaml.cs">
       <DependentUpon>SignInPage.xaml</DependentUpon>
     </Compile>
@@ -129,6 +132,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\TeamMembers.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\UserSettings.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

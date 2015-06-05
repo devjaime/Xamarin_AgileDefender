@@ -14,7 +14,7 @@
                 <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
                   <Image HeightRequest="50" Source="{Binding Image}" />
                   <StackLayout Padding="5,15,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">
-                    <Label Text="{Binding Name}" YAlign="Center" Font="Large" />
+                    <Label Text="{Binding Title}" YAlign="Center" Font="Large" />
                   </StackLayout>
                 </StackLayout>
 

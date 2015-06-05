@@ -7,6 +7,7 @@ using Xamarin.Forms;
 using AgileDefender.Setup;
 using AgileDefender.Views;
 using AgileDefender.Services;
+using Toasts.Forms.Plugin.Abstractions;
 
 namespace AgileDefender.ViewModels
 {
@@ -43,7 +44,9 @@ namespace AgileDefender.ViewModels
 
                 if (!userService.User.IsSuccess)
                 {
-                    var msg = userService.User.ErrorMessage;
+                    // CJP TODO, see if IToastNotificator can be resolved with autofac
+                    var notificator = DependencyService.Get<IToastNotificator>();
+                    await notificator.Notify(ToastNotificationType.Warning, "Sign In Error", userService.User.ErrorMessage, TimeSpan.FromSeconds(3));
                 }
             }
             catch (Exception ex)

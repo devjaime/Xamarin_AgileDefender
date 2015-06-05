@@ -30,8 +30,11 @@ namespace AgileDefender.Services
                         var dto = JsonConvert.DeserializeObject<User>(json);
                         User = new User
                         {
+                            Id = dto.Id,
                             Name = dto.Name,
-                            EmailAddress = dto.EmailAddress
+                            EmailAddress = dto.EmailAddress,
+                            IsSuccess = dto.IsSuccess,
+                            ErrorMessage = dto.ErrorMessage
                         };
                     }
                 }

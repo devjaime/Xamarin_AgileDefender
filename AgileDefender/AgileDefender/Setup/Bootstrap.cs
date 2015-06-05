@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Autofac;
 
+using Toasts.Forms.Plugin.Abstractions;
+
 using AgileDefender.Services;
 
 namespace AgileDefender.Setup
@@ -19,6 +21,8 @@ namespace AgileDefender.Setup
 
             builder.RegisterInstance(new UserService()).As<IUserService>();
             builder.RegisterInstance(new AgileActionService()).As<IAgileActionService>();
+
+            //builder.RegisterType<IToastNotificator>();
 
             Container = builder.Build();
         }

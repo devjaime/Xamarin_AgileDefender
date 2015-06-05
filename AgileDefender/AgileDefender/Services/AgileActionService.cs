@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using AgileDefender.Models;
+using AgileDefender.Helpers;
 
 namespace AgileDefender.Services
 {
@@ -14,12 +15,12 @@ namespace AgileDefender.Services
         public ObservableCollection<AgileAction> GetTestData()
         {
             var agileActionItems = new ObservableCollection<AgileAction>();
-            
-            agileActionItems.Add(new AgileAction("Daily Scrum", "https://xamarindevdayscdn.blob.core.windows.net/cdn/scrum_gray.png"));
-            agileActionItems.Add(new AgileAction("User Stories", "https://xamarindevdayscdn.blob.core.windows.net/cdn/user_stories_gray.png"));
-            agileActionItems.Add(new AgileAction("Assigned Open Bugs", "https://xamarindevdayscdn.blob.core.windows.net/cdn/bugs_gray.png"));
-            agileActionItems.Add(new AgileAction("Team Members", "https://xamarindevdayscdn.blob.core.windows.net/cdn/team_gray.png"));
-            agileActionItems.Add(new AgileAction("App Settings", "https://xamarindevdayscdn.blob.core.windows.net/cdn/settings_gray.png"));
+
+            agileActionItems.Add(new AgileAction(PageResourceName.DailyScrum, PageResources.ActionDailyScrumTitle, PageResources.ActionDailyScrumImage));
+            agileActionItems.Add(new AgileAction(PageResourceName.UserStories, PageResources.ActionUserStoriesTitle, PageResources.ActionUserStoriesImage));
+            agileActionItems.Add(new AgileAction(PageResourceName.AssignedOpenBugs, PageResources.ActionAssignedOpenBugsTitle, PageResources.ActionAssignedOpenBugsImage));
+            agileActionItems.Add(new AgileAction(PageResourceName.TeamMembers, PageResources.ActionTeamMembersTitle, PageResources.ActionTeamMembersImage));
+            agileActionItems.Add(new AgileAction(PageResourceName.AppSettings, PageResources.ActionAppSettingsTitle, PageResources.ActionAppSettingsImage));
 
             return agileActionItems;
         }

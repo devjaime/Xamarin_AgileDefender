@@ -90,7 +90,7 @@
       <StackLayout Padding="20" Spacing="10" VerticalOptions="Center" Grid.Row="1" Grid.Column="0">
         <StackLayout Spacing="5">
 
-          <local:LineEntry Placeholder="username" HorizontalOptions="FillAndExpand"
+          <local:LineEntry Placeholder="email address" HorizontalOptions="FillAndExpand"
                            Text="{Binding UserName, Mode=TwoWay}"
                            Style="{StaticResource LineEntryStyle}" />
 
