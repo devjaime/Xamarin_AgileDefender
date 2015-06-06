@@ -41,13 +41,6 @@ namespace AgileDefender.ViewModels
             {
                 // Get user from web service
                 await userService.GetUser(userName);
-
-                if (!userService.User.IsSuccess)
-                {
-                    // CJP TODO, see if IToastNotificator can be resolved with autofac
-                    var notificator = DependencyService.Get<IToastNotificator>();
-                    await notificator.Notify(ToastNotificationType.Warning, "Sign In Error", userService.User.ErrorMessage, TimeSpan.FromSeconds(3));
-                }
             }
             catch (Exception ex)
             {
@@ -64,12 +57,20 @@ namespace AgileDefender.ViewModels
                 IsBusy = false;
             }
 
-            var actionListPage = new ActionListPage
+            if (!userService.User.IsSuccess)
             {
-                //BindingContext = new ActionViewModel(action)
-            };
-
-            await _navigation.PushAsync(actionListPage);
+                // CJP TODO, see if IToastNotificator can be resolved with autofac
+                var notificator = DependencyService.Get<IToastNotificator>();
+                await notificator.Notify(ToastNotificationType.Warning, "Sign In Error", userService.User.ErrorMessage, TimeSpan.FromSeconds(3));
+            }
+            else
+            {
+                var actionListPage = new ActionListPage
+                {
+                    //BindingContext = new ActionViewModel(action)
+                };
+                await _navigation.PushAsync(actionListPage);
+            }
         }
 
         public string UserName

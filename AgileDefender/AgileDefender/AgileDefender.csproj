@@ -41,12 +41,16 @@
     <Compile Include="Helpers\Settings.cs" />
     <Compile Include="Helpers\ValidationResources.cs" />
     <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\TeamMemberModel.cs" />
+    <Compile Include="Models\UserLocationModel.cs" />
     <Compile Include="Services\IAgileActionService.cs" />
+    <Compile Include="Services\ITeamMemberService.cs" />
     <Compile Include="Services\IUserService.cs" />
     <Compile Include="Models\AgileAction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AgileActionService.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Services\TeamMemberService.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Setup\Bootstrap.cs" />
     <Compile Include="Setup\ServiceLocator.cs" />

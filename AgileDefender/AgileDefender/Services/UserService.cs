@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using Xamarin;
 
 using AgileDefender.Models;
+using AgileDefender.Helpers;
 
 namespace AgileDefender.Services
 {
@@ -23,19 +24,30 @@ namespace AgileDefender.Services
             {
                 using (var handle = Insights.TrackTime("GetUser"))
                 {
-                    using (var client = new HttpClient())
+                    if (string.IsNullOrEmpty(emailAddress))
                     {
-                        var url = string.Format("{0}/v1/user/getUserByEmail/?emailAddress={1}", baseUrl, emailAddress);
-                        var json = await client.GetStringAsync(url);
-                        var dto = JsonConvert.DeserializeObject<User>(json);
                         User = new User
                         {
-                            Id = dto.Id,
-                            Name = dto.Name,
-                            EmailAddress = dto.EmailAddress,
-                            IsSuccess = dto.IsSuccess,
-                            ErrorMessage = dto.ErrorMessage
+                            IsSuccess = false,
+                            ErrorMessage = ValidationResources.SignInEmptyEmailAddressOrPassword
                         };
+                    }
+                    else
+                    {
+                        using (var client = new HttpClient())
+                        {
+                            var url = string.Format("{0}/v1/user/getUserByEmail/?emailAddress={1}", baseUrl, emailAddress);
+                            var json = await client.GetStringAsync(url);
+                            var dto = JsonConvert.DeserializeObject<User>(json);
+                            User = new User
+                            {
+                                Id = dto.Id,
+                                Name = dto.Name,
+                                EmailAddress = dto.EmailAddress,
+                                IsSuccess = dto.IsSuccess,
+                                ErrorMessage = dto.ErrorMessage
+                            };
+                        }
                     }
                 }
             }
