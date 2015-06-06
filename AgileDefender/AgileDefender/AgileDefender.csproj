@@ -39,6 +39,7 @@
     <Compile Include="App.cs" />
     <Compile Include="Helpers\PageResources.cs" />
     <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="Helpers\ValidationResources.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Services\IAgileActionService.cs" />
     <Compile Include="Services\IUserService.cs" />
